@@ -178,7 +178,7 @@ router.post('/login', async (req, res) => {
  * @swagger
  * /auth/register:
  *   post:
- *     summary: Register a new medical user
+ *     summary: Register a new user
  *     tags: [Auth]
  *     requestBody:
  *       required: true
@@ -201,7 +201,7 @@ router.post('/login', async (req, res) => {
  *                 example: 'password123'
  *     responses:
  *       200:
- *         description: Medical user successfully registered
+ *         description: User successfully registered
  *         content:
  *           application/json:
  *             schema:
@@ -209,7 +209,7 @@ router.post('/login', async (req, res) => {
  *               properties:
  *                 message:
  *                   type: string
- *                   example: 'Medical user successfully registered. Check your email to activate your account.'
+ *                   example: 'User successfully registered. Check your email to activate your account.'
  *       400:
  *         description: Validation error in request data
  *         content:
@@ -276,7 +276,7 @@ router.post('/register', async (req, res) => {
 
     await sendActivationEmail(email, activationToken);
 
-    return res.status(200).json({ message: 'Medical user successfully registered. Check your email to activate your account.' });
+    return res.status(200).json({ message: 'User successfully registered. Check your email to activate your account.' });
   } catch (error) {
     return res.status(500).json({ message: `Error: ${error}` });
   }
