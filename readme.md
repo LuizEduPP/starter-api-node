@@ -44,11 +44,14 @@ yarn
 
 ### Configuration
 Create a .env file in the project root and add the following environment variables:
+
+```env
 MONGODB_URI=<your_mongodb_uri>
 JWT_SECRET=<your_jwt_secret>
 REFRESH_TOKEN_SECRET=<your_refresh_token_secret>
 BASE_URL=<base_url>
 PORT=<server_port>
+```
 
 ### Running the Project
 To start the server, use the command:
